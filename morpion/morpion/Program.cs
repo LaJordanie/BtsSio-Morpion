@@ -14,20 +14,25 @@ namespace Morpion
 {
     class Program
     {
+        // Crée une grille de jeu de morpion de taille 3x3.
 		public static int[,] grille = new int[3, 3];
         
+        // Cette fonction affiche la grille de jeu actuelle.
         public static void AfficherMorpion(int j, int k)
         {
         	for(int y=0;y<grille.GetLength(1);y++)
         	{
 	        	for(int x=0;x<grille.GetLength(0);x++)
 	        	{
+                    // Affiche "[O]" si le joueur 1 a joué dans cette cellule.
 	        		if(grille[y,x]==1){
 	        			Console.Write("[O]");
 	        		}
+                    // Affiche "[X]" si le joueur 2 a joué dans cette cellule.
 	        		else if(grille[y,x]==2){
 	        			Console.Write("[X]");
 	        		}
+                    // Affiche "[ ]" si la cellule est vide.
 	        		else{
 	        			Console.Write("[ ]");
 	        		}
@@ -35,13 +40,18 @@ namespace Morpion
 	        	Console.WriteLine();
         	}
         }
+        
+        // Cette fonction permet à un joueur de jouer à une position spécifique (j, k) sur la grille.
         public static bool AJouer(int j, int k, int joueur)
         {
             grille[j,k] = joueur;
             return false;
         }
+        
+        // Cette fonction vérifie si un joueur a gagné le jeu.
         public static bool Gagner(int l, int c, int joueur)
         {
+            // Calcule la somme des valeurs pour chaque ligne, colonne et diagonale.
             int TopRow = grille[0, 0] + grille[0, 1] + grille[0, 2];
             int MidRow = grille[1, 0] + grille[1, 1] + grille[1, 2];
             int BotRow = grille[2, 0] + grille[2, 1] + grille[2, 2];
@@ -51,8 +61,10 @@ namespace Morpion
             int Diagon = grille[0, 0] + grille[1, 1] + grille[2, 2];
             int RevDia = grille[0, 2] + grille[1, 1] + grille[2, 0];
 
+            // Calcule la somme des valeurs pour un joueur ayant trois marques dans une ligne.
             int playerTriple = joueur + joueur + joueur;
 
+            // Vérifie si l'un des joueurs a trois de ses marques dans une ligne.
             if (TopRow.Equals(playerTriple) || MidRow.Equals(playerTriple)|| BotRow.Equals(playerTriple)|| FirCol.Equals(playerTriple)|| SecCol.Equals(playerTriple)|| ThiCol.Equals(playerTriple)|| Diagon.Equals(playerTriple)|| RevDia.Equals(playerTriple)){
                 return true;
             }
@@ -60,8 +72,11 @@ namespace Morpion
                 return false;
             }
         }
+        
+        // Point d'entrée du programme. Le corps de cette fonction semble manquer dans le code fourni.
         static void Main()
-        {
+
+        {	// Initialisation des varirables pour le jeu
             int LigneDébut = Console.CursorTop+1;
             int ColonneDébut = Console.CursorLeft;
 
@@ -72,6 +87,7 @@ namespace Morpion
             bool gagner = false;
             bool bonnePosition = false;
             
+			// Initialisation de la grille de jeu
             for (j=0; j < grille.GetLength(0); j++)
             {
             	for (k=0; k < grille.GetLength(1); k++)
@@ -79,6 +95,7 @@ namespace Morpion
 			        grille[j,k] = 10;
         		}			
             }
+			// Boucle Principale du jeu
 			while(!gagner && essais != 9)
 			{
 				Console.Clear();
@@ -87,6 +104,7 @@ namespace Morpion
 					Console.WriteLine("Playing : Joueur {0}", joueur);
 					AfficherMorpion(j,k);
 
+					// Boucle pour obtenir une entrée valide pour la ligne
 					while(true){
 						Console.Write("Ligne (1 - 3):");
 						try 
@@ -96,6 +114,7 @@ namespace Morpion
 							else{Console.WriteLine("Valeur non valide!");}
 						} catch (Exception) {Console.WriteLine("Valeur non valide!");}
 					}
+					// Boucle pour obtenir une entrée valide pour la colonne
 					while(true){
 						Console.Write("Colonne (1 - 3):");
 						try 
@@ -105,6 +124,7 @@ namespace Morpion
 							else{Console.WriteLine("Valeur non valide!");}
 						} catch (Exception) {Console.WriteLine("Valeur non valide!");}
 					}
+					// Vérifie si la position est libre
 					if(grille[l,c]==10){bonnePosition=true;}
 					else{
 						Console.ForegroundColor=ConsoleColor.DarkRed;
@@ -112,6 +132,7 @@ namespace Morpion
 						Console.ForegroundColor=ConsoleColor.White;
 						System.Threading.Thread.Sleep(400);
 					}
+					// Si la position est libre, le joueur joue à cette position
 					if(bonnePosition)
 					{
 						AJouer(l,c,joueur);
@@ -121,6 +142,7 @@ namespace Morpion
 				{
 					Console.WriteLine(e.ToString());
 				}
+				// Vérifie si le joueur a gagné
 				if(Gagner(0,0,joueur))
 				{
 					Console.Clear();
@@ -129,6 +151,7 @@ namespace Morpion
 					AfficherMorpion(0,0);
 					break;
 				}
+				// Si le joueur a joué à une position valide, passe au joueur suivant
 				if(bonnePosition)
 				{
 					bonnePosition=false;
@@ -142,6 +165,7 @@ namespace Morpion
 						joueur=1;
 					}
 				}
+				// Si tous les mouvements possibles ont été joués sans qu'un joueur gagne, le jeu se termine en match nul
 				if(essais>=9)
 				{
 					Console.Clear();
@@ -150,6 +174,7 @@ namespace Morpion
 					break;
 				}
 			};
+			 // Attend une touche pour redémarrer le jeu
             Console.ReadKey();
             Main();
 		}
