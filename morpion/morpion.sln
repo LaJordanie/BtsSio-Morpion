@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 # SharpDevelop 5.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "morpion", "morpion\morpion.csproj", "{4B5018BE-FB49-478B-A1B2-D20737041E29}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "morpion", "morpion\morpion.csproj", "{5284019A-C51A-4E95-BCDC-A567BDBE1CEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,9 +10,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4B5018BE-FB49-478B-A1B2-D20737041E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4B5018BE-FB49-478B-A1B2-D20737041E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4B5018BE-FB49-478B-A1B2-D20737041E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4B5018BE-FB49-478B-A1B2-D20737041E29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5284019A-C51A-4E95-BCDC-A567BDBE1CEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5284019A-C51A-4E95-BCDC-A567BDBE1CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5284019A-C51A-4E95-BCDC-A567BDBE1CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5284019A-C51A-4E95-BCDC-A567BDBE1CEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

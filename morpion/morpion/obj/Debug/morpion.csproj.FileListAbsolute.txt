@@ -1,12 +1,6 @@
-U:\Espace privé\Github\btssio-morpion\morpion\morpion\bin\Debug\morpion.exe.config
-U:\Espace privé\Github\btssio-morpion\morpion\morpion\bin\Debug\morpion.exe
-U:\Espace privé\Github\btssio-morpion\morpion\morpion\bin\Debug\morpion.pdb
-U:\Espace privé\Github\btssio-morpion\morpion\morpion\obj\Debug\morpion.csprojResolveAssemblyReference.cache
-U:\Espace privé\Github\btssio-morpion\morpion\morpion\obj\Debug\morpion.exe
-U:\Espace privé\Github\btssio-morpion\morpion\morpion\obj\Debug\morpion.pdb
-C:\Users\etann\OneDrive\Bureau\Cours\AtelierProfessionnalisation\GIT\BtsSio-Morpion\Morpion\morpion\bin\Debug\morpion.exe.config
-C:\Users\etann\OneDrive\Bureau\Cours\AtelierProfessionnalisation\GIT\BtsSio-Morpion\Morpion\morpion\bin\Debug\morpion.exe
-C:\Users\etann\OneDrive\Bureau\Cours\AtelierProfessionnalisation\GIT\BtsSio-Morpion\Morpion\morpion\bin\Debug\morpion.pdb
-C:\Users\etann\OneDrive\Bureau\Cours\AtelierProfessionnalisation\GIT\BtsSio-Morpion\Morpion\morpion\obj\Debug\morpion.csprojResolveAssemblyReference.cache
-C:\Users\etann\OneDrive\Bureau\Cours\AtelierProfessionnalisation\GIT\BtsSio-Morpion\Morpion\morpion\obj\Debug\morpion.exe
-C:\Users\etann\OneDrive\Bureau\Cours\AtelierProfessionnalisation\GIT\BtsSio-Morpion\Morpion\morpion\obj\Debug\morpion.pdb
+C:\Users\etann\OneDrive\Documents\SharpDevelop Projects\morpion\morpion\obj\Debug\morpion.csprojResolveAssemblyReference.cache
+C:\Users\etann\OneDrive\Documents\SharpDevelop Projects\morpion\morpion\bin\Debug\morpion.exe.config
+C:\Users\etann\OneDrive\Documents\SharpDevelop Projects\morpion\morpion\bin\Debug\morpion.exe
+C:\Users\etann\OneDrive\Documents\SharpDevelop Projects\morpion\morpion\bin\Debug\morpion.pdb
+C:\Users\etann\OneDrive\Documents\SharpDevelop Projects\morpion\morpion\obj\Debug\morpion.exe
+C:\Users\etann\OneDrive\Documents\SharpDevelop Projects\morpion\morpion\obj\Debug\morpion.pdb
